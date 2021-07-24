@@ -5,6 +5,9 @@ var timer = document.getElementById("timer-container");
 var infoEl = document.createElement("div");
 var imgEl = document.createElement("img");
 var questionEl = document.createElement("div");
+var buttonA = document.getElementById("1");
+var buttonB = document.getElementById("2");
+var buttonC = document.getElementById("3");
 
 
 
@@ -18,11 +21,10 @@ var questionEl = document.createElement("div");
 
 // START BUTTON
 startButton.addEventListener("click", function () {
-  console.log("This button works!");
   closeDiv();
   showQuestion();
   countdown();
-  startGame(myQuestions[0]);
+  startGame();
 });
 /*
 // if answered correctly move to next question
@@ -33,6 +35,29 @@ if (answer is correct) {
         alert("wrong,select again")
     } 
 */
+function startGame() {
+  document.getElementById("questionField").textContent = myQuestions[currentQuestion].question;
+  buttonA.innerHTML = myQuestions[currentQuestion].answers.a;
+  buttonB.innerHTML = myQuestions[currentQuestion].answers.b;
+  buttonC.innerHTML = myQuestions[currentQuestion].answers.c;
+  
+  var questionTextBox = document.querySelector(".currentQuestionTextBox");
+  if (currentQuestion === 1) {
+      questionTextBox.textContent = myQuestions[0].question;
+  }
+  else if (currentQuestion === 2) {
+      questionTextBox.textContent = myQuestions[1].question;
+  } else if (currentQuestion === 3) {
+      questionTextBox.textContent = myQuestions[2].question;
+  }
+  
+  }
+
+  buttonC.addEventListener("click", function () {
+    // if statement determing action according to answer
+    var correctAnswer = myQuestions[currentQuestion].correctAnswer;
+    
+  });
 
 
 
@@ -152,19 +177,7 @@ var myQuestions = [
 var currentQuestion = 0;
 var i = 0;
 
-function startGame() {
-  
-var questionTextBox = document.querySelector(".currentQuestionTextBox");
-if (currentQuestion === 1) {
-    questionTextBox.textContent = myQuestions[0].question;
-}
-else if (currentQuestion === 2) {
-    questionTextBox.textContent = myQuestions[1].question;
-} else if (currentQuestion === 3) {
-    questionTextBox.textContent = myQuestions[2].question;
-}
 
-}
 
 function nextQuestion() {
     
