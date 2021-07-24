@@ -1,4 +1,4 @@
-var startButton = document.querySelector("#start-button");
+var startButton = document.getElementById("start");
 var introText = document.getElementById("introText-container");
 var questionBox = document.getElementById("question-container");
 var timer = document.getElementById("timer-container");
@@ -8,6 +8,23 @@ var questionEl = document.createElement("div");
 var buttonA = document.getElementById("1");
 var buttonB = document.getElementById("2");
 var buttonC = document.getElementById("3");
+
+
+
+
+
+
+var questionEl = document.querySelector("#tasks-to-do");
+
+startButton.addEventListener("click", function() {
+  var questionItemEl = document.createElement("li");
+  questionItemEl.className = "task-item";
+  questionItemEl.textContent = "This is a new question.";
+  questionEl.appendChild(questionItemEl);
+});
+
+
+
 
 
 
