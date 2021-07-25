@@ -22,15 +22,15 @@
   Apache
   [Github License](Apache)
   ## Contributing:
-  undefined
+  n/a
   ## Tests:
-  undefined
+  n/a
   ## Questions:
   Below are links to my Github page and email in case you would like to contact me or have any further questions.
   ## Link
   [Link to Code Quiz](https://wberry86.github.io/code-quiz/)
   ## Screenshot
-  ![Portfolio screenshot](https://github.com/wberry86/react-portfolio/blob/main/src/assets/project/images/portfolio.PNG)
+  ![Portfolio screenshot](https://github.com/wberry86/code-quiz/blob/main/assets/images/Capture.PNG)
 
   - Github: [wberry86](https://github.com/wberry86)
   - Email: wberry86@gmail.com
